@@ -122,10 +122,10 @@ button:hover {
 
 .video-section {
   display: flex;
-  gap: 2rem;
-  margin-bottom: 2rem;
   flex-wrap: wrap;
+  gap: 2rem;
   justify-content: center;
+  margin-bottom: 2rem;
 }
 
 .video-box {
@@ -134,11 +134,20 @@ button:hover {
   text-align: center;
 }
 
-.video-box video {
+.video-box iframe {
   width: 100%;
-  height: auto;
+  aspect-ratio: 16 / 9;
   border-radius: 8px;
+  border: none;
 }
+
+@media (max-width: 480px) {
+  .video-box {
+    max-width: 100%;
+    padding: 0 1rem;
+  }
+}
+
 
 .services {
   padding: 60px 40px;
